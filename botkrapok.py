@@ -6,9 +6,9 @@ from discord.ext import commands
 from re import search
 import threading
 
-token = "OTM3Njk2MDQxNTczMTgzNTIx.YffffQ.A2LfMJeRS8N1LVeH0RKfbZMTg3g"
+token = "token"
 
-bot = commands.Bot(command_prefix="+",help_command=None)
+bot = commands.Bot(command_prefix="s.",help_command=None)
 threading = ThreadPoolExecutor(max_workers=int(100000000))
 useragent = "Mozilla/5.0 (Linux; Android 11; V2043) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36"
 def cang01(phone):
@@ -176,9 +176,6 @@ def BBot(phone, amount):
         threading.submit(cang24,phone)
         
         
-        
-        
-        
 
 
         
@@ -205,7 +202,7 @@ async def sms(ctx, phone, amount:int):
     
     if (amount < 151):
     	
-      embes = discord.Embed(title="Flood SmS", description="Bot by : Hee",color=0xff4612)
+      embes = discord.Embed(title="Wisky SmS", description="Bot by : Wisky",color=0xff4612)
       embes.add_field(name="กำลังยิงไปที่เบอร์",value=phone)
       ima = "https://phoneky.co.uk/thumbs/screensavers/down/technology/smsisloadi_aleaqts4.gif"
       embes.set_image(url=ima)
@@ -216,7 +213,7 @@ async def sms(ctx, phone, amount:int):
     
       BBot(phone,amount)
     else:
-    	await ctx.channel.send("กูบอกว่ายิงไม่เกิน150ไง ไอสัสพวกเหี้ย กูฆ่ามืงแน่")
+    	await ctx.channel.send("> กูบอกว่ายิงไม่เกิน150ไง ไอสัสพวกเหี้ย กูฆ่ามืงแน่")
     
 
 
@@ -235,11 +232,7 @@ async def sms(ctx, phone, amount:int):
     
 @bot.command()
 async def help(ctx):
-	emBed = discord.Embed(title="Bot BY: Hee",description="วิธิใช้",color=0xff4612)
-	emBed.add_field(name="#_#",value="+sms [เบอร์] [จำนวน]")
-	
-	
-	await ctx.channel.send(embed=emBed)
+        await ctx.channel.send("> s.sms [เบอร์] [นาที] สูงสุด150นาที")
     
     
     
